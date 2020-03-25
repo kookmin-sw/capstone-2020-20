@@ -69,6 +69,8 @@ Front-end | back-end
 > * 이메일 : 
 <br/>
 
+<img align="left" width="15%" height="15%" src="https://user-images.githubusercontent.com/12928638/77510075-48ed4f00-6eb1-11ea-999e-59a554f7ca00.jpg">
+
 ### 이지훈 :kr:
 
 > * 학번 : 20153215
