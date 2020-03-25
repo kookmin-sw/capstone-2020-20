@@ -37,7 +37,18 @@
 ***
 <br/><br/>
 # 2. Abstract
-...
+
+**The project 'RoooM' is to develop a web service that provides a 'space' for people involved in team activities.**
+
+The goal is to provide teams with free, yet highly available services to multiple users, while also improving team efficiency.
+- Sign up & login by Google account linkage - Improve accessibility through simple member management and linkage with Google
+
+- Free 'room' creation and member organization - Make it simple and easy between teams without complicated procedures
+
+- Highly usable functions - Real-time chat (file sharing, mention function, department-specific chat), meeting place recommendation (optimized place tracking through Google Maps), scheduling and coordination among members
+
+- 'Friendly' service that can gather without unnecessary personal information, provides services with high utilization and accessibility, and does not want a high level for users
+
 
 
 ***
