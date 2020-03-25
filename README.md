@@ -75,9 +75,9 @@ Front-end | back-end
 
 ### 윤수민 :kr:
 
-> * 학번 : 
-> * 역할 : 
-> * 이메일 : 
+> * 학번 : 20162791 
+> * 역할 : Front-end(React)
+> * 이메일 : sumin9497@gmail.com
 <br/>
 
 <img align="left" width="15%" height="15%" src="https://user-images.githubusercontent.com/12928638/77510075-48ed4f00-6eb1-11ea-999e-59a554f7ca00.jpg">
