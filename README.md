@@ -71,9 +71,9 @@ Front-end | back-end
 
 ### 이지훈 :kr:
 
-> * 학번 : 
-> * 역할 : 
-> * 이메일 :
+> * 학번 : 20153215
+> * 역할 : Front-end(React)
+> * 이메일 :wlgnssla311@gmail.com
 <br/>
 
 ### 한준호 :kr:
