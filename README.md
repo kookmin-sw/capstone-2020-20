@@ -73,6 +73,8 @@ Front-end | back-end
  > * 이메일 : huhmin9094@kookmin.ac.kr
 <br/>
 
+<img align="left" width="15%" height="15%" src="https://user-images.githubusercontent.com/48545651/77557038-9cd15580-6efc-11ea-81bd-5d7584e38719.jpg">
+
 ### 윤수민 :kr:
 
 > * 학번 : 20162791 
