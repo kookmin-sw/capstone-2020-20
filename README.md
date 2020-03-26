@@ -131,7 +131,7 @@ Front-end | back-end
 <br/><br/>
 # 4. 소개 영상 (계획 발표 영상)
 
-[![Watch the video](https://user-images.githubusercontent.com/21411732/77677263-cb216480-6fd2-11ea-8202-2390c8a21265.png)](https://youtu.be/XjlExIf-6DQ)
+[![Watch the video](https://user-images.githubusercontent.com/21411732/77678654-cf4e8180-6fd4-11ea-8d3b-c7ce10a1f699.png)](https://youtu.be/XjlExIf-6DQ)
 
 ***
 <br/><br/>
