@@ -120,7 +120,7 @@ Front-end | back-end
 > * 역할 : Front-end(React)
 > * 이메일 :wlgnssla311@gmail.com
 <br/>
-
+<img align="left" width="15%" height="15%" src="https://user-images.githubusercontent.com/58366036/77721070-1c5e4200-702d-11ea-8cbc-9082ef56dc2f.jpg">
 ### 한준호 :kr:
 
 > * 학번 : 20153239
