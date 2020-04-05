@@ -1,14 +1,21 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
+
+
 
 import Header from "../components/Header";
-
+import Footer from "../components/Footer";
 
 class Main extends Component {
     render() {
         return (
-            <div>
-                <Header></Header>
-            </div>
+            <Fragment>
+                <div className="wrapper">
+                    <Header></Header>
+                    <div className="content">추후 만들 예정</div>
+                </div>
+
+                <Footer></Footer>
+            </Fragment>
         )
     }
 }
