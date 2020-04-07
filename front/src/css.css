@@ -107,17 +107,49 @@ input.text {
     outline: none;
 }
 
-.sumit {
+.submit {
     margin-bottom: 15px;
     background-color: #07689F;
 }
 
-p.sumit input.text{
+p.submit input.text{
     text-align: center;
     height: 40px;
-    line-height: 40px;
+    line-height: 40px;  
     color: white;
     background-color: transparent;
     cursor: pointer;
+}
+
+
+/** MyRoom **/
+
+.MyRoom_wrapper {
+    background-color: #f8f8f8;
+    min-height: 100%;
+}
+
+.Invitation_container {
+    padding-top: 63px;
+    height: 150px;
+    margin : 0 180px;
+    background-color: white;
+}
+
+.List_container {
+    display : flex;
+    justify-content: space-around;
+    margin : 0 180px;
+}
+
+/** Room_card **/
+
+.room_card {
+    float: left;
+    margin : 30px;
+    width: 220px;
+    height: 220px;
+    border: 1px solid #e3e3e3;
+    background-color: black;
 }
 

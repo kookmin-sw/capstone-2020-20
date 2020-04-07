@@ -20,8 +20,8 @@ class Login extends Component {
                             <p className="input">
                                 <input type="password" maxLength="10" placeholder="비밀번호" className="text" />
                             </p>
-                            <p className="sumit">
-                                <input type="sumit" value="로그인" className="text" />
+                            <p className="submit">
+                                <input type="submit" value="로그인" className="text" />
                             </p>
                         </form>
 

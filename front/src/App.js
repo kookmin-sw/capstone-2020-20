@@ -5,6 +5,8 @@ import './App.css';
 
 import Main from "./container/Main";
 import Login from "./container/Login";
+import MyRoom from "./container/MyRoom";
+import InRoom from "./container/InRoom";
 
 function App() {
 
@@ -13,6 +15,8 @@ function App() {
       <BrowserRouter>
         <Route exact path="/" component={Main} />
         <Route exact path="/login" component={Login} />
+        <Route exact path="/myroom" component={MyRoom} />
+        <Route exact path="/inroom" component={InRoom} />
       </BrowserRouter>
 
 
