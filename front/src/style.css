@@ -1,0 +1,196 @@
+.wrap{
+  margin: 0 auto;
+  width: 1440px;
+  height: 1966px;
+  background: #F5FAFF;
+}
+
+.header{
+  width: 1440px;
+  height: 70px;
+  border-bottom: 1px solid #E9EAFC;  
+  background: #fff;
+}
+
+.top_area{
+  width: 1300px;
+  margin: 0 auto;
+}
+
+.logo_area{
+  padding-top: 5px;
+  width: 160px;
+  margin: 0 auto;
+  float: left;
+}
+
+.icon_box_area{
+  position: relative;
+  padding-top: 5px;
+  width: 220px;
+  margin: 0 auto;
+  float: right;
+}
+
+.icon_area{
+  width: 60px;
+  margin-right: 10px;
+  float: left;
+}
+
+.content{
+  
+  margin: 0 auto;
+}
+
+.invitation_area{
+  height: 150px;
+  margin-top:50px;
+}
+
+.invitation_box{
+  width: 498px;
+  height: 96px;
+  border-radius: 10px;
+  border: 1px solid #E9EAFC;  
+  background: #fff;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.invitation_box .room_color{
+  margin: 15px;
+  float:left;
+}
+
+.invitation_box .room_name{
+  float:left;
+  font-size: 20px;
+  height: 40px;
+  margin: 15px 10px 10px 0;
+  width: 60px;
+}
+
+.invitation_box .room_member{
+  font-size: 12px;
+  margin: 20px 5px 5px 5px;
+  float:left;
+  width: 250px;
+}
+
+.invitation_box .room_desc{
+  font-size: 12px;
+  margin: 10px 5px 10px 5px;
+  width: 250px;
+  float: left;
+}
+
+.invitation_choose{
+  height: 96px;
+  width:80px;
+  float:right;
+  margin:15px 20px 0 0;
+}
+.invitation_accept{
+  background: #B6D2FC;
+  height: 30px;
+  width: 70px;
+  color: #fff;
+  border-radius: 10px;
+  text-align:center;
+  margin-bottom:10px;
+}
+
+.invitation_deny{
+  background: #fff;
+  height: 30px;
+  width: 70px;
+  color: #857F7F;
+  border-radius: 10px;
+  text-align:center;
+}
+
+.list_area{
+  height: 500px;
+  margin: 0 auto;
+  overflow:hidden;
+}
+
+.list_box_area{
+  height: 400px;
+  display: flex;
+  justify-content: center;
+}
+
+.list_box{
+  margin: 20px;
+  height: 300px;
+  width: 300px;
+  border-radius: 10px;
+  border: 1px solid #E9EAFC;  
+  background: #fff;
+  float: left;
+}
+
+.room_color{
+  height: 30px;
+  width: 30px;
+  border-radius: 15px; 
+  margin: 20px;
+  float: left;
+}
+
+.room_name{
+  float:left;
+  font-size: 24px;
+  height: 40px;
+  margin: 15px;
+  width: 200px;
+}
+
+.room_member{
+  margin: 0 20px 20px 20px;
+  font-size:14px;
+}
+
+.room_desc{
+  margin: 40px 40px 40px 20px;
+  font-size:14px;
+  text-align: left;
+}
+
+.room_enter{
+  background: #B6D2FC;
+  height: 30px;
+  width: 80px;
+  color: #fff;
+  border-radius: 10px;
+  text-align:center;
+  margin-left: 110px;
+}
+
+.list_bar_area{
+  height: 18px;
+  display: flex;
+  justify-content: center;
+}
+
+.list_bar{
+  margin: 10px;
+  height: 16px;
+  width: 16px;
+  border-radius: 10px;
+  border: 1px solid #C4C4C4;  
+  background: #fff;
+  float: left;
+}
+
+.list_bar_current{
+  margin: 10px;
+  height: 16px;
+  width: 16px;
+  border-radius: 10px;
+  border: 1px solid #C4C4C4;  
+  background: #C4C4C4;
+  float: left;
+}
