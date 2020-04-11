@@ -5,9 +5,7 @@ import '../css.css';
 const Invitation = () => {
 
     return (
-        <div className = "invite">
-
-        </div>
+      <div></div>
     )
 }
 

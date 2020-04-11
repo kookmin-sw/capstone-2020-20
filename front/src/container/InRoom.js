@@ -1,9 +1,14 @@
 import React, { Component, Fragment } from 'react';
 
+import Header from "../components/Header";
+
 class InRoom extends Component {
     render() {
         return (
             <Fragment>
+            <Header></Header>
+            <div className="InRoom_wrapper">
+
                 <div className="left_nav">
                     <div className="user">
 
@@ -13,16 +18,17 @@ class InRoom extends Component {
                     </div>
                 </div>
                 <div className="room_content">
-                    <div className = "chat">
+                    <div className="chat">
 
                     </div>
-                    <div className = "notice">
+                    <div className="notice">
 
                     </div>
-                    <div className = "file">
-                        
+                    <div className="file">
+
                     </div>
                 </div>
+            </div>
             </Fragment>
         )
     }

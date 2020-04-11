@@ -10,7 +10,7 @@ class Login extends Component {
                 <div className="wrapper">
                     <div className="login-container">
                         <h1>
-                            <div><img src={Logo} width="140" /></div>
+                            <div><img src={Logo} width="160" /></div>
                         </h1>
 
                         <form>
@@ -28,7 +28,7 @@ class Login extends Component {
                     </div>
                 </div>
 
-               <Footer></Footer>
+                <Footer></Footer>
             </Fragment>
         )
     }

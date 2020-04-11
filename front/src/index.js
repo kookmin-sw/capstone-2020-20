@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import './FontAwesome';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';

@@ -68,6 +68,7 @@ html, body, #root, .App {
 /* Content */
 .content {
     padding-top: 63px;
+    text-align: center;
 }
 
 /* Footer */
@@ -80,7 +81,7 @@ html, body, #root, .App {
     line-height: 50px;
 }
 
-/* Login.js */
+/* Login */
 .login-container {
     position: absolute;
     top : 50%;
@@ -89,15 +90,17 @@ html, body, #root, .App {
     margin-left: -180px;
     height: 280px;
     width: 360px;
+    text-align: center;
 }
 
-.input {
+.login-container .input {
     margin : 15px 0 15px 0;
-    padding : 5px 10px;
+    padding : 5px 20px;
     border: 1px solid #d6d6d6;
+    border-radius: 20px;
 }
 
-input.text {
+.login-container input.text {
     border: 0;
     width: 100%;
     height: 28px;
@@ -107,12 +110,13 @@ input.text {
     outline: none;
 }
 
-.submit {
+.login-container .submit {
     margin-bottom: 15px;
     background-color: #07689F;
+    border-radius: 20px;
 }
 
-p.submit input.text{
+.login-container p.submit input.text{
     text-align: center;
     height: 40px;
     line-height: 40px;  
@@ -122,7 +126,7 @@ p.submit input.text{
 }
 
 
-/** MyRoom **/
+/** MyRoom**/
 
 .MyRoom_wrapper {
     background-color: #f8f8f8;
@@ -133,23 +137,202 @@ p.submit input.text{
     padding-top: 63px;
     height: 150px;
     margin : 0 180px;
-    background-color: white;
-}
-
-.List_container {
-    display : flex;
-    justify-content: space-around;
-    margin : 0 180px;
 }
 
 /** Room_card **/
-
+.List_container {
+    vertical-align: middle;
+    text-align: center;
+}
 .room_card {
-    float: left;
+    display : inline-block;
     margin : 30px;
     width: 220px;
     height: 220px;
-    border: 1px solid #e3e3e3;
-    background-color: black;
+    border-radius: 20px;
+    vertical-align: middle;
+    background-color: white;
+    border: 1px solid #E6E6E6;
 }
 
+/**Plus card**/
+.plus_card {
+    display : inline-block;
+    margin : 30px;
+    width: 220px;
+    height: 220px;
+    background-color: #D8D8D8;
+    border-radius: 20px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.plus_card:hover {
+    background-color:#BDBDBD;
+}
+
+.fa-plus {
+    color : #6E6E6E;
+    margin-top: 63px;
+}
+
+/**paging*/
+.paging {
+	margin-top: 15px;
+	text-align: center;
+	font-size: 0;
+}
+.paging a,
+.paging strong {
+	display: inline-block;
+	width: 20px;
+	height: 18px;
+	margin: 0 1px;
+	border: 1px solid #dbdbdb;
+	color: #767676;
+	font-size: 11px;
+	font-weight: bold;
+	line-height: 20px;
+	vertical-align: middle;
+  text-decoration: none;
+}
+.paging a:hover,
+.paging a:active,
+.paging a:focus {
+	border: 1px solid #A3DAF9;	
+}
+.paging strong {
+	color: #fff;
+	background: #A3DAF9;
+	border: 1px solid #A3DAF9;
+}
+.paging .direction {
+	background: url('http://leroro.net/images/ui/sp_btn_paging.gif') no-repeat;
+}
+.paging .direction.prev {
+	margin: 0 12px 0 1px;
+	background-position: -20px 0;
+}
+.paging .direction.next {
+	margin: 0 1px 0 12px;
+	background-position: -40px 0;
+}
+.paging .direction span {
+	position: absolute;
+	display: block;
+	width: 20px;
+	height: 18px;
+	overflow: hidden;
+	z-index: -1;
+}
+
+/**MakeRoom**/
+
+
+.makeroom-container {
+    position: absolute;
+    top : 50%;
+    margin-top: -300px;
+    left: 50%;
+    margin-left: -180px;
+    width: 360px;
+    text-align: center;
+}
+
+.makeroom-container h1 {
+    font-size: 28px;
+}
+
+.makeroom_form {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.makeroom-container .input {
+    margin : 5px 0 15px 0;
+    padding : 5px 20px;
+    border: 1px solid #d6d6d6;
+    border-radius: 20px;
+}
+
+.makeroom-container input.text {
+    border: 0;
+    width: 100%;
+    height: 28px;
+    line-height: 28px;
+    color: #292929;
+    font-size: 16px;
+    outline: none;
+}
+
+.makeroom-container .submit {
+    float: left;
+    width: 100px;
+    margin-bottom: 15px;
+    background-color: #07689F;
+    border-radius: 20px;
+    margin : 30px 40px;
+}
+
+.makeroom-container p.submit input.text{
+    text-align: center;
+    height: 40px;
+    line-height: 40px;  
+    color: white;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
+
+
+/** InRoom **/
+
+.InRoom_wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    float: left;
+}
+
+.left_nav {
+    border-right: 1px solid #d1d8e4;
+    width: 260px    ;
+    height: 100%;
+    float: left;
+}
+
+.user {
+    height: 35%;
+    border-bottom: 1px solid #d1d8e4;
+}
+
+.content_list {
+    height: 64%;
+}
+
+.room_content {
+    width: calc(100% - 261px);
+    height: 100%;
+    float: left;
+}
+
+.chat {
+    width: calc(100% - 401px);  
+    height: 100%;
+    float: left;
+    border-right: 1px solid #d1d8e4;
+}
+
+.notice {
+    width: 400px;
+    height: 50%;
+    float: right;
+    border-bottom: 1px solid #d1d8e4;
+}
+
+.file {
+    width: 400px;
+    height: 49%;
+    float: right;
+}

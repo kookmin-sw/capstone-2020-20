@@ -13,7 +13,7 @@ const Header = () => {
             <div className="header-container">
                 <div className="logo"><img src={Logo} width="140" /></div>
                 <div className="sign-box">
-                    <Link className= "sign" to="/login" >로그인</Link>
+                    <Link className="sign" to="/login" >로그인</Link>
                 </div>
             </div>
         </div>
