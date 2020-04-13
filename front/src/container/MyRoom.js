@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 
 import Header from "../components/Header";
-import Invitaion from "../components/Invitaion";
+import Invitation from "../components/Invitation";
 import Room_card from "../components/Room_card";
 import Plus_card from '../components/Plus_card';
 
@@ -12,6 +12,7 @@ class MyRoom extends Component {
                 <Header></Header>
                 <div className="MyRoom_wrapper">
                     <div className="Invitation_container">
+                        <Invitation></Invitation>
                     </div>
 
                     <div className="List_container">

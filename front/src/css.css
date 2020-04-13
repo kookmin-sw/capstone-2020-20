@@ -139,6 +139,77 @@ html, body, #root, .App {
     margin : 0 180px;
 }
 
+/** Invitation **/
+
+.invitation_area{
+    height: 150px;
+    margin-top:50px;
+}
+  
+.invitation_box{
+    width: 498px;
+    height: 96px;
+    border-radius: 10px;
+    border: 1px solid #E6E6E6;  
+    background: #fff;
+    margin: 0 auto;
+    overflow: hidden;
+}
+  
+.invitation_box .room_color{
+    margin: 15px;
+    float:left;
+}
+  
+.invitation_box .room_name{
+    float:left;
+    font-size: 20px;
+    height: 40px;
+    margin: 15px 10px 10px 0;
+    width: 60px;
+}
+  
+.invitation_box .room_member{
+    font-size: 12px;
+    margin: 20px 5px 5px 5px;
+    float:left;
+    width: 250px;
+}
+  
+.invitation_box .room_desc{
+    font-size: 12px;
+    margin: 10px 5px 10px 5px;
+    width: 250px;
+    float: left;
+}
+  
+.invitation_choose{
+    height: 96px;
+    width:80px;
+    float:right;
+    margin:15px 20px 0 0;
+}
+
+.invitation_accept{
+    background: #A3DAF9;
+    height: 30px;
+    width: 70px;
+    color: #fff;
+    border-radius: 10px;
+    text-align:center;
+    margin-bottom:10px;
+}
+  
+.invitation_deny{
+    background: #fff;
+    height: 30px;
+    width: 70px;
+    color: #857F7F;
+    border: 1px solid #E6E6E6; 
+    border-radius: 10px;
+    text-align:center;
+}
+
 /** Room_card **/
 .List_container {
     vertical-align: middle;
