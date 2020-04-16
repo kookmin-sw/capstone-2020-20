@@ -357,8 +357,6 @@ html, body, #root, .App {
 }
 
 
-
-
 /** InRoom **/
 
 .InRoom_wrapper {
@@ -375,13 +373,75 @@ html, body, #root, .App {
     float: left;
 }
 
+/** User **/
+
 .user {
+    margin-top:60px;
     height: 35%;
     border-bottom: 1px solid #d1d8e4;
+    background-color: #f8f8f8;
 }
+
+
+.user_img{
+    margin: 0 auto;
+    padding-top: 15px;
+    width: 50px;
+    height: 50px;
+}
+
+.user_box{
+    height:30px;
+    width: 200px;
+    text-align: center;
+    margin: 25px;
+    background-color: #fff;
+    border-radius: 12px;
+    font-size: 12px;
+    line-height: 30px;
+}
+
+.user_edit{
+    height:30px;
+    width: 160px;
+    text-align: center;
+    color: #292929;
+    border-radius: 12px;
+    font-size: 12px;
+    background-color: #fff;
+    line-height: 30px;
+    text-decoration: none;
+}
+
+/** Content **/
 
 .content_list {
     height: 64%;
+}
+
+.menu{
+    padding: 10px;
+    text-decoration: underline;
+    text-align: center;
+    font-size: 12px;
+    background-color: #f8f8f8;
+}
+
+.sub_menu{
+    text-align: center;
+    font-size: 12px;
+    margin : 10px;
+}
+
+.menu_plus{
+    text-align: center;
+    font-size: 12px;
+    margin: 10px;
+}
+
+.menu_line{
+
+    border-bottom: 1px solid #d1d8e4
 }
 
 .room_content {
