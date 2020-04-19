@@ -2,8 +2,8 @@ package co.kr.rooom.service.config;
 
 import co.kr.rooom.service.domain.User.authority.Authority;
 import co.kr.rooom.service.domain.User.authority.AuthorityRepo;
-import co.kr.rooom.service.domain.User.user.Password;
-import co.kr.rooom.service.domain.User.user.PasswordRepo;
+import co.kr.rooom.service.domain.User.user.Name;
+import co.kr.rooom.service.domain.User.user.NameRepo;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
@@ -20,11 +20,10 @@ import java.util.List;
 @Component
 public class CustomUserDetailService implements UserDetailsService
 {
-    private PasswordRepo userRepository;
-
+    private NameRepo userRepository;
     private AuthorityRepo authorityRepository;
 
-    public CustomUserDetailService(PasswordRepo userRepository, AuthorityRepo authorityRepository)
+    public CustomUserDetailService(NameRepo userRepository, AuthorityRepo authorityRepository)
     {
         this.userRepository = userRepository;
         this.authorityRepository = authorityRepository;
@@ -34,8 +33,8 @@ public class CustomUserDetailService implements UserDetailsService
     @Transactional
     public UserDetails loadUserByUsername(String username)
     {
-        List<Password> password = userRepository.findAllByConceptLikeAndStatementLike(username, "Y");
-        List<Authority> authority = authorityRepository.findAllByConceptLikeAndStatementLike(username, "active");
+        List<Name> password = userRepository.findAllByConceptLikeAndStatementLike(username, "Y");
+        List<Authority> authority = authorityRepository.findAllByConceptLikeAndStatementLike(username, "Y");
         List<String> authList = new ArrayList<>();
         authList.add(authority.get(0).getValue());
 

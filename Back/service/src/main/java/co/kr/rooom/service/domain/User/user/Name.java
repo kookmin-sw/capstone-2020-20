@@ -18,31 +18,31 @@ import javax.persistence.Table;
 @Getter
 @NoArgsConstructor
 @Entity
-@Table(name = "user")
-public class Password {
+@Table(name = "user_name")
+public class Name {
     // mysql 설정을 이와 같이 잡아줄 수 있습니다
     // length 는 말 그대로 Varchar(60)같이 값이 들어갈 수 있는
     // 허용 범위를 정해주는 겁니다.
     // length 나 nullable 은 테이블 설정에 맞게 꼭 수정하세요
     // 안그럼 에러납니다
-    @Column(nullable = false, length = 60)
+    @Column(nullable = false, length = 9)
     private String user;
 
     @Id
-    @Column(length = 60)
+    @Column(length = 9)
     private String concept;
 
-    @Column(nullable = false, length = 255)
+    @Column(nullable = false, length = 50)
     private String value;
 
     @Column(nullable = false, length = 1)
     private String statement;
 
-    @Column(nullable = false, length = 20)
+    @Column(nullable = false, length = 30)
     private String registered;
 
     @Builder
-    public Password(String user, String concept, String value, String statement, String registered) {
+    public Name(String user, String concept, String value, String statement, String registered) {
         this.user = user;
         this.concept = concept;
         this.value = value;
