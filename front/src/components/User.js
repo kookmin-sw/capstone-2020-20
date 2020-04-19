@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Link } from "react-router-dom";
 import '../css.css';
 
@@ -11,7 +11,7 @@ const User = () => {
     return (
         <div className="user">
             <div className="user_container">
-                <div className="user_img"><img src={user} width="50" /></div>
+                <div className="user_img"><img src={user} width="50" alt="" /></div>
                 <div className="user_box">
                     윤수민
                 </div>

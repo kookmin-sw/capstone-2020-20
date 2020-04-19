@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
 import '../css.css';
 
 
 
 
-const Room_card = () => {
+const RoomCard = () => {
 
     return (
         <div className="room_card">
@@ -15,4 +15,4 @@ const Room_card = () => {
     )
 }
 
-export default Room_card; 
+export default RoomCard; 

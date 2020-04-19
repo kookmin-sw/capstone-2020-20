@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Link } from "react-router-dom";
 import '../css.css';
 
@@ -11,7 +11,7 @@ const Header = () => {
     return (
         <div className="header">
             <div className="header-container">
-                <div className="logo"><img src={Logo} width="140" /></div>
+                <div className="logo"><img src={Logo} width="140" alt="" /></div>
                 <div className="sign-box">
                     <Link className="sign" to="/login" >로그인</Link>
                 </div>

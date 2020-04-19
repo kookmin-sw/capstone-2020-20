@@ -10,7 +10,7 @@ class Login extends Component {
                 <div className="wrapper">
                     <div className="makeroom-container">
                         <h1>
-                            <div><img src={Logo} width="80" /></div>
+                            <div><img src={Logo} width="80" alt="" /></div>
                             방 만들기
                         </h1>       
 
