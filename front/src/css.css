@@ -7,6 +7,7 @@
 
 html, body, #root, .App {
     height: 100%;
+    background-color: #fafafa;
 }
 
 .wrapper {
@@ -83,14 +84,17 @@ html, body, #root, .App {
 
 /* Login */
 .login-container {
+    background-color: white;
     position: absolute;
     top : 50%;
-    margin-top: -170px;
     left: 50%;
-    margin-left: -180px;
+    margin-top: -240px;
+    margin-left: -192px;
+    padding : 70px 24px 20px;
     height: 280px;
     width: 360px;
     text-align: center;
+    box-shadow : 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
 }
 
 .login-container .input {
@@ -129,7 +133,6 @@ html, body, #root, .App {
 /** MyRoom**/
 
 .MyRoom_wrapper {
-    background-color: #f8f8f8;
     min-height: 100%;
 }
 
@@ -150,10 +153,10 @@ html, body, #root, .App {
     width: 498px;
     height: 96px;
     border-radius: 10px;
-    border: 1px solid #E6E6E6;  
     background: #fff;
     margin: 0 auto;
     overflow: hidden;
+    box-shadow : 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
 }
   
 .invitation_box .room_color{
@@ -225,7 +228,8 @@ html, body, #root, .App {
     border-radius: 20px;
     vertical-align: middle;
     background-color: white;
-    border: 1px solid #E6E6E6;
+    box-shadow : 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
+
 }
 
 /**Plus card**/
@@ -238,7 +242,9 @@ html, body, #root, .App {
     border-radius: 20px;
     cursor: pointer;
     vertical-align: middle;
+    box-shadow : 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
 }
+
 
 .plus_card:hover {
     background-color:#BDBDBD;
@@ -305,11 +311,13 @@ html, body, #root, .App {
 .makeroom-container {
     position: absolute;
     top : 50%;
-    margin-top: -300px;
     left: 50%;
-    margin-left: -180px;
+    margin-top: -300px;
+    padding : 50px 40px 24px;
     width: 360px;
+    margin-left: -220px;
     text-align: center;
+    box-shadow : 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
 }
 
 .makeroom-container h1 {

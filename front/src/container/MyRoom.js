@@ -19,14 +19,14 @@ class MyRoom extends Component {
                         <Room_card></Room_card>
                         <Room_card></Room_card>
                         <Plus_card></Plus_card>
-                        <div class="paging">
-                            <a href="#" class="direction prev"><span>이전</span></a>
+                        <div className="paging">
+                            <a href="#" className="direction prev"><span>이전</span></a>
                             <a href="#">1</a>
                             <a href="#">2</a>
                             <a href="#">3</a>
                             <a href="#">4</a>
                             <strong>5</strong>
-                            <a href="#" class="direction next"><span>다음</span></a>
+                            <a href="#" className="direction next"><span>다음</span></a>
                         </div>
                     </div>
                 </div>

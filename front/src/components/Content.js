@@ -20,7 +20,7 @@ const Content = () => {
                 </div>
                 <div className="menu_plus">
                     채널 추가 
-                    <FontAwesomeIcon icon="plus-circle" size="x" />
+                    <FontAwesomeIcon icon="plus-circle" size="1x" />
                 </div>
                 <div className="menu_line"></div>
                 
@@ -35,7 +35,7 @@ const Content = () => {
                 </div>
                 <div className="menu_plus">
                     멤버 초대 
-                    <FontAwesomeIcon icon="plus-circle" size="x" />
+                    <FontAwesomeIcon icon="plus-circle" size="1x" />
                 </div>
                 <div className="menu_line"></div>
 
