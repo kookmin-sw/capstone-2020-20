@@ -1,4 +1,4 @@
-import React, { Component, Fragment, useContext } from 'react';
+import React, { Fragment, useContext } from 'react';
 
 import Cookies from 'js-cookie';
 
@@ -7,12 +7,10 @@ import Invitation from "../components/Invitation";
 import RoomCard from "../components/RoomCard";
 import PlusCard from '../components/PlusCard';
 import MyRoomContext from '../context/MyRoomContext';
-import Axios from 'axios';
 
 const MyRoom = () => {
-    const { myRoomInfo, setmyRoomInfo } = useContext(MyRoomContext);
 
-    console.log(myRoomInfo.data);
+    const { isLogged, setIsLogged } = useContext(MyRoomContext);
 
     /** 
     const r = async() => {
@@ -27,7 +25,7 @@ const MyRoom = () => {
         <Fragment>
             {Cookies.get("token") ? 
             <Fragment>
-            <Header></Header>
+            <Header isLogged = {true}></Header>
             <div className="MyRoom_wrapper">
                 <div className="Invitation_container">
                     <Invitation></Invitation>
@@ -50,7 +48,27 @@ const MyRoom = () => {
             </div>
             </Fragment>
             :
-            <div></div>}
+            <Fragment>
+            <Header isLogged = {true}></Header>
+            <div className="MyRoom_wrapper">
+                <div className="Invitation_container">
+                    {/* <Invitation></Invitation> */}
+                </div>
+
+                <div className="List_container">    
+                    <PlusCard></PlusCard>
+                    {/* <div className="paging">
+                        <a href="!#" className="direction prev"><span>이전</span></a>
+                        <a href="!#" >1</a>
+                        <a href="!#" >2</a>
+                        <a href="!#" >3</a>
+                        <a href="!#" >4</a>
+                        <strong>5</strong>
+                        <a href="!#" className="direction next"><span>다음</span></a>
+                    </div> */}
+                </div>
+            </div>
+            </Fragment>}
             
         </Fragment>
     )

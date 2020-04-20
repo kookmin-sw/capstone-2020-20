@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useContext } from 'react';
+import React, { Fragment, useState, useContext} from 'react';
 import '../css.css';
 import moment from 'moment'
 import Logo from '../images/Logo.png';
@@ -12,20 +12,21 @@ const Login = (props) => {
     const [User, setUser] = useState({
         sUserId: "",
         sUserPW: "",
-        sCallKey: "kmucs2",
+        sCallKey: "KMUCS2",
         sAuthKey: "",
         txt_return_url: "",
         signupError: ''
     });
 
-    const { myRoomInfo, setMyRoomInfo } = useContext(MyRoomContext);
+    let SUCC_CD = ""
+    let USER_NM = ""
 
-    
+    const { isLogged, setIsLogged } = useContext(MyRoomContext);
 
     const userTyping = (whichInput, event) => {
         switch (whichInput) {
             case 'id':
-                setUser({ ...User, sUserId: event.target.value });
+                setUser({ ...User, sUserId: event.target.value, sAuthKey: getEncryptStr("swlog1", event.target.value) });
                 break;
 
             case 'password':
@@ -37,8 +38,6 @@ const Login = (props) => {
         }
     }
 
-
-    
     const getEncryptStr = (sEncKey, sUser_id) => {
         let now = moment().format('YYYYMMDD');
 
@@ -59,82 +58,50 @@ const Login = (props) => {
         return ret_buf;
     }
 
-    const submitSignup = async(e) => {
+    const submitSignup = async (e) => {
         e.preventDefault();
-        console.log("executed")
+        await axios.get('https://ktis.kookmin.ac.kr/kmu/com.LoginAPI.do', {
+            params: {
+                txt_userid: User.sUserId,
+                txt_userpw: User.sUserPW,
+                txt_call_key: User.sCallKey,
+                txt_auth_key: User.sAuthKey,
+            },
+        }).then((res) => {
+            const data = res.data.split("\n")
+            const realData = data[1].split("|")
+            SUCC_CD = realData[0]
+            USER_NM = realData[2];
+        })
 
-        let formData = new FormData();
-        formData.append("User_id", User.sUserId)
-        formData.append("User_name", "이지훈");
-
-        await axios.post("http://211.208.115.66:20000/user/token", formData)
-        .then((res) => {
-            Cookies.set('token', res.data);
-        }).catch((err) => console.log(err));
-
-        await axios.get("http://211.208.115.66:20000/user/token", {headers : {Authorization : "token"}})
-        .then((res) => {
-            setMyRoomInfo({...myRoomInfo, data: res.data});
-        }).catch((err) => console.log(err));
-        
-        
-        
-        props.history.push('/myroom');
-
-        // let formData = new FormData();
-        // formData.append("txt_userid", User.sUserId)
-        // formData.append("txt_userpw", User.sUserPW)
-        // formData.append(" txt_call_key", User.sCallKey)
-        // formData.append("txt_auth_key", User.sAuthKey)
-
-        // await axios.post('https://ktis.kookmin.ac.kr/kmu/com.LoginSSO.do', formData,
-        //     { headers: { 'Access-Control-Allow-Origin': '*' } })
-        //     .then((res) => {
-        //         console.log(res.data);
-        //     })
-            
-        // console.log("dd");
-
-    }
-
-    /** 
-    const submitSignup = (e) => {
-
-        e.preventDefault();
-        User.sAuthKey = getEncryptStr("swlog1", User.sUserId);
-        console.log(User.sUserId, User.sUserPW, User.sCallKey, User.sAuthKey)
-
-
-        const aa = async () => {
-            try {
-                let formData = new FormData();
-                formData.append("txt_userid", User.sUserId)
-                formData.append("txt_userpw", User.sUserPW)
-                formData.append(" txt_call_key", User.sCallKey)
-                formData.append("txt_auth_key", User.sAuthKey)
-
-                await axios.post('https://ktis.kookmin.ac.kr/kmu/com.LoginSSO.do', formData,
-                    { headers: { 'Access-Control-Allow-Origin': '*' } })
-                    .then((res) => {
-                        console.log(res.data);
-                    })
-                    
-                console.log("dd");
-
-            } catch (e) {
-                console.log("err");
-            }
+        if ((SUCC_CD != 999)) {
+            alert("아이디나 비밀번호가 틀렸습니다. \n다시 확인해주세요.")
         }
 
-        aa();
-        //props.history.push('/myroom');
+        else {
+            console.log("로그인 성공")
+            
+            setIsLogged(true);
+
+            let formData = new FormData();
+
+            formData.append("User_id", User.sUserId)
+            formData.append("User_name", USER_NM);
+
+            // await axios.post("http://211.208.115.66:20000/user/token", formData)
+            //     .then((res) => {
+            //         Cookies.set('token', res.data);
+            //     }).catch((err) => console.log(err));
+
+            // await axios.get("http://211.208.115.66:20000/user/token", { headers: { Authorization: Cookies.get('token') } })
+            //     .then((res) => {
+            //         setMyRoomInfo({ ...myRoomInfo, data: res.data });
+            //     }).catch((err) => console.log(err));
+
+            props.history.push('/myroom')
+        }
+
     }
-    */
-
-
-
-
-
 
     return (
         <Fragment>
@@ -152,8 +119,8 @@ const Login = (props) => {
                             <input name="txt_userpw" value={User.sUserPW} onChange={(e) => { userTyping('password', e) }} type="password" maxLength="20" placeholder="비밀번호" className="text" />
                         </p>
                         <input type="hidden" name="txt_call_key" value={User.sCallKey}></input>
-                        <input type="hidden" name="txt_auth_key " value={User.sAuthKey}></input>
-                        <input type="hidden" name="txt_auth_key " value={User.txt_return_url}></input>
+                        <input type="hidden" name="txt_auth_key" value={User.sAuthKey}></input>
+                        <input type="hidden" name="txt_return_url" value={User.txt_return_url}></input>
                         <p className="submit">
                             <input type="submit" value="로그인" className="text" />
                         </p>

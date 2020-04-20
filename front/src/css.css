@@ -24,7 +24,7 @@ html, body, #root, .App {
     border-bottom : 1px solid #d1d8e4;
     background-color: white;
     display: block;
-    z-index: 9999;
+    z-index: 101;
 }
 
 .header-container {
@@ -45,13 +45,25 @@ html, body, #root, .App {
 }
 
 .sign-box {
-    margin-right: 60px;
     padding : 5px 0 5px 0;
+    width: 300px;
     height: 50px;
     float: right;
 }
 
+.Icon {
+    margin: 9px 10px 0 10px ;
+    color : #A3DAF9;
+    cursor: pointer;
+}
+
+.Icon:hover{
+    color : #07689F;
+}
+
+
 .sign {
+    display: inline-block;
     width: 100px;
     height: 34px;
     margin : 7px;
@@ -59,16 +71,51 @@ html, body, #root, .App {
     border : 1px solid #A3DAF9;
     border-radius: 14px;
     background-color: #A3DAF9;
-    float: left;
     font-weight: 900;
     text-decoration: none;
     color : white;
     cursor: pointer;
+    
+}
+
+.userPopUp {
+    top : 5px;
+    left: -50px;;
+    position: relative;
+    background-color: white;
+    border: 1px solid rgba(100, 100, 100, .4);
+    border-radius: 0 0 2px 2px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, .25);
+    width: 300px;
+    height: 300px; 
+    display: none;
+}
+
+/** User **/
+
+.user_img{
+    padding-top: 50px;
+}
+
+.user_box{
+    font-size: 20px;
+    margin: 30px;
+}
+
+
+.popupBack {
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    display: none;
 }
 
 /* Content */
 .content {
-    padding-top: 63px;
+    padding-top: 200px;
+    font-size: 50px;
     text-align: center;
 }
 
@@ -346,6 +393,17 @@ html, body, #root, .App {
     outline: none;
 }
 
+.makeroom-container .inputColor {
+    margin : 5px 0 15px 0;
+    padding : 5px 20px;
+    border-radius: 20px;
+}
+
+.makeroom-container input.color {
+    width: 100%;
+    height: 30px;
+}
+
 .makeroom-container .submit {
     float: left;
     width: 100px;
@@ -355,7 +413,7 @@ html, body, #root, .App {
     margin : 30px 40px;
 }
 
-.makeroom-container p.submit input.text{
+.makeroom-container p.submit .text{
     text-align: center;
     height: 40px;
     line-height: 40px;  
@@ -368,88 +426,18 @@ html, body, #root, .App {
 /** InRoom **/
 
 .InRoom_wrapper {
+    padding-top: 63px;
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: calc(100% - 63px);
     float: left;
 }
 
 .left_nav {
     border-right: 1px solid #d1d8e4;
-    width: 260px    ;
+    width: 260px;
     height: 100%;
     float: left;
-}
-
-/** User **/
-
-.user {
-    margin-top:60px;
-    height: 35%;
-    border-bottom: 1px solid #d1d8e4;
-    background-color: #f8f8f8;
-}
-
-
-.user_img{
-    margin: 0 auto;
-    padding-top: 15px;
-    width: 50px;
-    height: 50px;
-}
-
-.user_box{
-    height:30px;
-    width: 200px;
-    text-align: center;
-    margin: 25px;
-    background-color: #fff;
-    border-radius: 12px;
-    font-size: 12px;
-    line-height: 30px;
-}
-
-.user_edit{
-    height:30px;
-    width: 160px;
-    text-align: center;
-    color: #292929;
-    border-radius: 12px;
-    font-size: 12px;
-    background-color: #fff;
-    line-height: 30px;
-    text-decoration: none;
-}
-
-/** Content **/
-
-.content_list {
-    height: 64%;
-}
-
-.menu{
-    padding: 10px;
-    text-decoration: underline;
-    text-align: center;
-    font-size: 12px;
-    background-color: #f8f8f8;
-}
-
-.sub_menu{
-    text-align: center;
-    font-size: 12px;
-    margin : 10px;
-}
-
-.menu_plus{
-    text-align: center;
-    font-size: 12px;
-    margin: 10px;
-}
-
-.menu_line{
-
-    border-bottom: 1px solid #d1d8e4
 }
 
 .room_content {

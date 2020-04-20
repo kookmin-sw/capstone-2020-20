@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import MyRoomContext from '../context/MyRoomContext';
 
 const MyRoomProvider = ({children}) => {
+    const [isLogged, setIsLogged] = useState(false);
     const [myRoomInfo, setMyRoomInfo] = useState({});
 
     const option = {
-        myRoomInfo,
-        setMyRoomInfo,
+        isLogged,
+        setIsLogged
     }
 
     return (

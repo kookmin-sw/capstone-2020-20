@@ -1,20 +1,21 @@
 import React, { Component, Fragment } from 'react';
 
 import Header from "../components/Header";
-import User from "../components/User";
-import Content from "../components/Content";
+import InRoomContent from "../components/InRoomContent";
 
-class InRoom extends Component {
-    render() {
-        return (
-            <Fragment>
-            <Header></Header>
+const InRoom = () => {
+
+    return (
+        <Fragment>
+            <Header isLogged={true}></Header>
             <div className="InRoom_wrapper">
 
                 <div className="left_nav">
-                    <User></User>
-                    <Content></Content>
+                    <div className = "aboutRoom">
+
+                    </div>
                 </div>
+
                 <div className="room_content">
                     <div className="chat">
 
@@ -26,10 +27,11 @@ class InRoom extends Component {
 
                     </div>
                 </div>
+
             </div>
-            </Fragment>
-        )
-    }
+        </Fragment>
+    )
+
 }
 
 
