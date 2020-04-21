@@ -423,7 +423,7 @@ html, body, #root, .App {
 }
 
 
-/** InRoom **/
+/** InRoomContent **/
 
 .InRoom_wrapper {
     padding-top: 63px;
@@ -440,6 +440,61 @@ html, body, #root, .App {
     float: left;
 }
 
+.aboutRoom {
+    height: 200px;
+    border-bottom: 1px solid #d1d8e4;
+}
+
+.roomColor {
+    margin: 10px 105px;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: yellowgreen;
+}
+
+.roomName {
+    text-align: center;
+    font-size : 20px;
+    margin:15px;
+}
+
+.roomDesc {
+    text-align: center;
+    font-size : 13px;
+    margin:15px;
+}
+
+.navList {
+    text-align: center;
+    position: relative;
+}
+
+.menu {
+    padding: 10px 0;
+    border-bottom: 1px solid #d1d8e4;
+    cursor: pointer;
+    position: relative;
+}
+
+
+.subList  {
+    padding: 10px 0;
+    position: relative;
+    display: none;
+    background-color: teal;
+
+}
+
+.subList li {
+    position: relative;
+}
+
+
+.menu:hover > .subList {
+    display: block;
+} 
+
 .room_content {
     width: calc(100% - 261px);
     height: 100%;
@@ -453,15 +508,113 @@ html, body, #root, .App {
     border-right: 1px solid #d1d8e4;
 }
 
+.chatView {
+    height: 80%;
+    overflow-y: scroll;
+}
+
+.chat-message {
+    position:relative;
+    height: 60px;
+    margin : 10px 30px 10px 60px;
+}
+
+.chat-message .icon {
+    position: absolute;
+    top: 7px;
+    left: -30px;
+}
+
+.chat-message .msg {
+    float: left;
+    background-color: #ecf6ff;
+    width: auto;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 14px;
+    margin-left: 6px;
+    clear: both;
+}
+
+.chat-message .name {
+    float: left;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.mine .icon {
+    display: none;
+}
+
+.mine span {
+    display: none;
+}
+
+.mine .msg {
+    float: right;
+    clear: both;
+}
+
+.chatForm {
+    height: 19%;
+    border-top: 1px solid #d1d8e4;
+    text-align: center;
+}
+
+.chatForm .input {
+    float: left;
+    width: calc(100% - 150px);
+    height: 70%;
+    margin: 15px;
+    padding : 5px 10px;
+    border: 1px solid #d6d6d6;
+    border-radius: 5px;
+}
+
+.chatForm .text {
+    border: 0;
+    width: 100%;
+    height: 100%;
+    line-height: 28px;
+    color: #292929;
+    font-size: 16px;
+    outline: none;
+    resize: none;
+}
+
+.chatForm .submit {
+    float: left;
+    width: 70px;
+    background-color: #07689F;
+    border-radius: 20px;
+    margin-bottom : 100px;
+    margin-top: 50px;
+}
+
+.chatForm  p.submit .text{
+    text-align: center;
+    height: 40px;
+    line-height: 40px;  
+    color: white;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
+
 .notice {
     width: 400px;
     height: 50%;
     float: right;
     border-bottom: 1px solid #d1d8e4;
+    text-align: center;
+    vertical-align: middle;
 }
 
 .file {
     width: 400px;
     height: 49%;
     float: right;
+    text-align: center;
+    vertical-align: middle;
 }

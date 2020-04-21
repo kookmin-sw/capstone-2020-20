@@ -40,7 +40,7 @@ const Login = (props) => {
                             방 색상
                                 <p className="inputColor">
                                 <input type="color" maxLength="10" className="color" />
-                            </p>
+                                </p>
                         </label>
                         <p className="submit">
                             <input type="submit" value="생성하기" className="text" />
