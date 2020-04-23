@@ -108,7 +108,7 @@ The goal is to provide teams with free, yet highly available services to multipl
 
 > * 학번 : 20153239
 > * 역할 : Web back-end(Spring Boot with REST API, mysql, JDBC, JPA) 담당
-> * 이메일 : hkarryone@kookmin.ac.kr
+> * 이메일 : karryone@kookmin.ac.kr
 
 ***
 <br/><br/>
