@@ -55,7 +55,8 @@ const MyRoom = () => {
                     {/* <Invitation></Invitation> */}
                 </div>
 
-                <div className="List_container">    
+                <div className="List_container">
+                <RoomCard></RoomCard>    
                     <PlusCard></PlusCard>
                     {/* <div className="paging">
                         <a href="!#" className="direction prev"><span>이전</span></a>

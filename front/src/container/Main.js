@@ -11,7 +11,7 @@ const Main = () => {
             <div className="wrapper">
                 <Header isLogged={false}></Header>
                 <div className="content">
-                    Rooom 관련 소개
+                    Rooom 소개
                 </div>
             </div>
 

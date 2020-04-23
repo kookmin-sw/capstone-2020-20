@@ -10,8 +10,8 @@ const InRoomContent = () => {
             <div className="left_nav">
                 <div className="aboutRoom">
                     <div className="roomColor"></div>
-                    <div className="roomName">캡스톤 디자인</div>
-                    <div className="roomDesc">2020-1 캡스톤 디자인 방입니다.  <br></br>소프트웨어 학생들은 위한 Room 프로젝트 진행중</div>
+                    <div className="roomName">20조</div>
+                    <div className="roomDesc">20조 입니다.</div>
                 </div>
                 <div>
                     <ul className="navList">
@@ -43,54 +43,40 @@ const InRoomContent = () => {
                         <div class="chat-message">
                             <FontAwesomeIcon className="icon" icon="user-circle" size="2x" color="grey" />
                             <span className="name">허민</span>
-                            <div className="msg">안녕</div>
+                            <div className="msg">발표 준비 하고 있어??</div>
                         </div>
 
                         <div class="chat-message">
                             <FontAwesomeIcon className="icon" icon="user-circle" size="2x" color="grey" />
                             <span className="name">허민</span>
-                            <div className="msg">안녕</div>
-                        </div>
-
-                        <div class="chat-message">
-                            <FontAwesomeIcon className="icon" icon="user-circle" size="2x" color="grey" />
-                            <span className="name">허민</span>
-                            <div className="msg">안녕</div>
-                        </div>
-
-                        <div class="chat-message">
-                            <FontAwesomeIcon className="icon" icon="user-circle" size="2x" color="grey" />
-                            <span className="name">허민</span>
-                            <div className="msg">안녕</div>
-                        </div>
-
-                        <div class="chat-message">
-                            <FontAwesomeIcon className="icon" icon="user-circle" size="2x" color="grey" />
-                            <span className="name">허민</span>
-                            <div className="msg">안녕</div>
+                            <div className="msg">어디까지됨??</div>
                         </div>
 
                         <div class="chat-message mine">
                             <FontAwesomeIcon className="icon" icon="user-circle" size="2x" color="grey" />
                             <span className="name">허민</span>
-                            <div className="msg">안녕</div>
+                            <div className="msg">지금 동영상 찍는중</div>
                         </div>
 
                         <div class="chat-message mine">
                             <FontAwesomeIcon className="icon" icon="user-circle" size="2x" color="grey" />
                             <span className="name">허민</span>
-                            <div className="msg">안녕</div>
+                            <div className="msg">ㄱㄷㄱㄷ</div>
                         </div>
+
 
                         <div class="chat-message mine">
                             <FontAwesomeIcon className="icon" icon="user-circle" size="2x" color="grey" />
                             <span className="name">허민</span>
-                            <div className="msg">안녕</div>
+                            <div className="msg">계획서는 다씀??</div>
                         </div>
 
 
-
-
+                        <div class="chat-message">
+                            <FontAwesomeIcon className="icon" icon="user-circle" size="2x" color="grey" />
+                            <span className="name">허민</span>
+                            <div className="msg">ㅇㅇ 난 다함</div>
+                        </div>
 
 
                     </div>
