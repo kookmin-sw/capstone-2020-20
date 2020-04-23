@@ -29,6 +29,9 @@
 ## 프로젝트 개발 도구 계획도
 ![KakaoTalk_20200315_161750692](https://user-images.githubusercontent.com/21411732/77322149-9dc88280-6d56-11ea-85bd-d31b47489a24.png)
 
+## 프로젝트 시스템 구조
+  ![시스템 구조](https://user-images.githubusercontent.com/21411732/79990747-603d4d80-84ec-11ea-9fdd-92c7a44b50a1.png)
+  
 - framework(spring boot), library(reactJS), IDE(Intellij, VSCode)의 선택 이유
   - 실무에서 최신 기술로 분류되는 react와 spring boot를 사용해보고자하는 취지.
   - Intellij와 VSCode는 가장 많이 사용되며, 편의성이 두드러지기 때문에 사용하게 됨.
@@ -57,13 +60,6 @@
 - Spring MVC vs Spring Boot
   - Spring Framework의 경우 기존 MVC와 최신 Boot가 존재한다. MVC의 경우 configuration을 xml 파일에서 관리하지만, Boot의 경우 쉽게 @(annotation) 하나로 관리가 가능하다. 또한 기본적으로 지원해주는 다양한 서비스도 Spring Boot가 더 많다. 이에 Boot을 선택하게 됐다.
   
-  ***
-  
-  ## 프로젝트 시스템 구조
-  ![시스템 구조](https://user-images.githubusercontent.com/21411732/79990747-603d4d80-84ec-11ea-9fdd-92c7a44b50a1.png)
-
-
-
 ***
 <br/><br/>
 # 2. Abstract
@@ -71,8 +67,6 @@
 **The project 'RoooM' is to develop a web service that provides a 'space' for people involved in team activities.**
 
 The goal is to provide teams with free, yet highly available services to multiple users, while also improving team efficiency.
-- Sign up & login by Google account linkage - Improve accessibility through simple member management and linkage with Google
-
 - Free 'room' creation and member organization - Make it simple and easy between teams without complicated procedures
 
 - Highly usable functions - Real-time chat (file sharing, mention function, department-specific chat), meeting place recommendation (optimized place tracking through Google Maps), scheduling and coordination among members
