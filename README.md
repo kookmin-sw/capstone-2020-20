@@ -134,7 +134,7 @@ Front-end | back-end
 
 # 5. 중간 시연 영상 (중간 자문 평가)
 
-업로드 예정
+[![제목 없음](https://user-images.githubusercontent.com/12928638/80109903-0eaec480-85b9-11ea-8433-7a7fde8ba8fa.png)](https://www.youtube.com/watch?v=hzdG9PkrjIs)
 
 ***
 <br/><br/>
