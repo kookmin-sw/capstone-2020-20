@@ -1,7 +1,12 @@
 import React from 'react'
 import '../css.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
+import Popup from "reactjs-popup";
+import Channel from "./Channel.js";
+import Member from "./Member.js"
+import MemberInfo from "./MemberInfo.js"
+import File from "./File.js"
+import Notice from "./Notice.js"
 
 const InRoomContent = () => {
 
@@ -20,6 +25,9 @@ const InRoomContent = () => {
                                 <li>기본 채널</li>
                                 <li>프론트</li>
                                 <li>백엔드</li>
+                                <Popup modal trigger={<button>채널 추가</button>}>
+                                    {close => <Channel close={close} />}
+                                </Popup>
                             </ul>
                         </li>
                         <li className = "menu">팀원
@@ -27,7 +35,12 @@ const InRoomContent = () => {
                                 <li>이지훈</li>
                                 <li>허민</li>
                                 <li>한준호</li>
-                                <li>윤수민</li>
+                                <Popup modal trigger={<li>윤수민</li>}>
+                                    {close => <MemberInfo close={close} />}
+                                </Popup>
+                                <Popup modal trigger={<button> 멤버 추가</button>}>
+                                    {close => <Member close={close} />}
+                                </Popup>
                             </ul>
                         </li>
                         <li className = "menu">자료</li>
@@ -94,11 +107,13 @@ const InRoomContent = () => {
                 <div className="notice">
 
                     공지사항
+                    <Notice></Notice>
 
                 </div>
                 <div className="file">
 
                     업로드 된 자료
+                    <File></File>
 
                 </div>
             </div>

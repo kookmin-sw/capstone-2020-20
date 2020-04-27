@@ -665,3 +665,114 @@ html, body, #root, .App {
     text-align: center;
     vertical-align: middle;
 }
+
+/** plus channel **/
+
+/** .Modal-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.16);
+}
+  
+.Modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 320px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0px 3px 6px rgba(0,0,0,0.16);
+    margin: 16px;
+}
+
+p.title{
+      font-size: 16pt;
+      font-weight: bold;
+      color: #333;
+    }
+
+.Modal_content{
+    border-top: 1px solid #bebebe;
+    margin-top: 16px;
+}
+
+.button-wrap{
+    margin: 0;
+    margin-top: 8px;
+    
+}
+
+.button_wrap .button{
+    width: 100%;
+    padding: 12px 0;
+    border-radius: 0 0 10px 10px;
+    background-color: #ad7cef;
+    font-size: 13pt;
+    color: white;
+    border: 0;
+    cursor: pointer;
+
+}
+.button_wrap .button:hover{
+    background-color: #7f49c8;
+}
+.button_wrap .button:active{
+    background-color: #7e49c8;
+}
+
+**/
+
+.modal {
+    font-size: 12px;
+}
+  
+.modal_header {
+    width: 100%;
+    border-bottom: 1px solid gray;
+    font-size: 18px;
+    text-align: center;
+    padding: 5px;
+}
+.modal_content {
+    width: 100%;
+    padding: 10px 5px;
+}
+.modal_actions {
+    width: 100%;
+    padding: 10px 5px;
+    margin: auto;
+    text-align: center;
+}
+.modal_close {
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    padding: 2px 5px;
+    line-height: 20px;
+    right: -10px;
+    top: -10px;
+    font-size: 24px;
+    background: #ffffff;
+    border-radius: 18px;
+    border: 1px solid #cfcece;
+}
+
+/** 공지사항 **/
+.notice_container {
+    width: '100%';
+    max-width: 36 ;
+}
+
+/** 자료 **/
+.file_container {
+    width: '100%';
+    max-width: 36 ;
+}
+
+.file_icon {
+    margin: 9px 10px 0 10px ;
+}
