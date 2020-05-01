@@ -1,6 +1,7 @@
 import React from "react";
 import '../css.css';
-import Popup from "reactjs-popup";
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
 
 export default ({ close }) => (
   <div className="modal">
@@ -8,21 +9,33 @@ export default ({ close }) => (
       &times;
     </a>
     <div className="modal_header"> 채널 추가 </div>
-    <div className="modal_content">
-      <label>채널 이름</label>
-      <input type="text" placeholder="추가할 채널명을 입력하세요 " />
+    <form className="modal_content" noValidate autoComplete="off">
+      <TextField id="outlined-basic" label="채널명" variant="outlined" />
       <div className="modal_actions">
-        <button
-          className="button"
-          onClick={() => {
-            console.log("modal closed ");
-            close();
-          }}
-        >
-          추가
-        </button>
+        <div className="modal_button">
+          <Button
+            variant="outlined"
+            onClick={() => {
+              
+            }}
+          >
+            추가
+          </Button>
+        </div>
+        <div className="modal_button">
+          <Button
+            variant="outlined"
+            className="button"
+            onClick={() => {
+              console.log("modal closed ");
+              close();
+            }}
+          >
+            닫기
+          </Button>
+        </div>
       </div>
-    </div>
+      </form>
     
   </div>
 );

@@ -9,7 +9,7 @@ import user from '../images/user.png';
 const MemberInfo = ({ close }) => {
 
     return (
-        <div className="user_container">
+        <div className="modal">
             <a className="modal_close" onClick={close}>
                 &times;
             </a>

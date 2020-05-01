@@ -529,7 +529,7 @@ html, body, #root, .App {
     padding: 10px 0;
     position: relative;
     display: none;
-    background-color: teal;
+    background-color: #A3DAF9;
 
 }
 
@@ -666,65 +666,7 @@ html, body, #root, .App {
     vertical-align: middle;
 }
 
-/** plus channel **/
-
-/** .Modal-overlay{
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background-color: rgba(0,0,0,0.16);
-}
-  
-.Modal{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 320px;
-    border-radius: 10px;
-    background-color: white;
-    box-shadow: 0px 3px 6px rgba(0,0,0,0.16);
-    margin: 16px;
-}
-
-p.title{
-      font-size: 16pt;
-      font-weight: bold;
-      color: #333;
-    }
-
-.Modal_content{
-    border-top: 1px solid #bebebe;
-    margin-top: 16px;
-}
-
-.button-wrap{
-    margin: 0;
-    margin-top: 8px;
-    
-}
-
-.button_wrap .button{
-    width: 100%;
-    padding: 12px 0;
-    border-radius: 0 0 10px 10px;
-    background-color: #ad7cef;
-    font-size: 13pt;
-    color: white;
-    border: 0;
-    cursor: pointer;
-
-}
-.button_wrap .button:hover{
-    background-color: #7f49c8;
-}
-.button_wrap .button:active{
-    background-color: #7e49c8;
-}
-
-**/
+/** plus channel, member **/
 
 .modal {
     font-size: 12px;
@@ -747,6 +689,12 @@ p.title{
     margin: auto;
     text-align: center;
 }
+
+.modal_button{
+    margin: 10px;
+    display: inline-block;
+}
+
 .modal_close {
     cursor: pointer;
     position: absolute;
@@ -776,3 +724,4 @@ p.title{
 .file_icon {
     margin: 9px 10px 0 10px ;
 }
+

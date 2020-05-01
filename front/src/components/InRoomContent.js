@@ -7,6 +7,8 @@ import Member from "./Member.js"
 import MemberInfo from "./MemberInfo.js"
 import File from "./File.js"
 import Notice from "./Notice.js"
+import Button from '@material-ui/core/Button';
+
 
 const InRoomContent = () => {
 
@@ -25,7 +27,7 @@ const InRoomContent = () => {
                                 <li>기본 채널</li>
                                 <li>프론트</li>
                                 <li>백엔드</li>
-                                <Popup modal trigger={<button>채널 추가</button>}>
+                                <Popup modal trigger={<Button variant="outlined" color="primary">채널 추가</Button>}>
                                     {close => <Channel close={close} />}
                                 </Popup>
                             </ul>
@@ -35,7 +37,10 @@ const InRoomContent = () => {
                                 <li>이지훈</li>
                                 <li>허민</li>
                                 <li>한준호</li>
-                                <Popup modal trigger={<li>윤수민</li>}>
+                                <Popup trigger={<li>윤수민</li>} 
+                                    position="right bottom" 
+                                    lockScroll="false"
+                                    contentStyle= {{ width: "300px" }} >
                                     {close => <MemberInfo close={close} />}
                                 </Popup>
                                 <Popup modal trigger={<button> 멤버 추가</button>}>
