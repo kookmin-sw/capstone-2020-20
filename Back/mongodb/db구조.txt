@@ -1,0 +1,453 @@
+DB: mongodb 
+
+db name : mongodb_room
+
+Collection
+{
+user_authority
+user_myRoom
+user_name
+
+room_colorCode
+room_created
+room_exp
+room_file
+room_leader
+room_members
+room_name
+room_topic
+
+file_download
+file_name
+file_size
+file_type
+file_uploader
+}
+
+dto class
+{
+
+#user_authority
+@Getter
+@NoArgsConstructor
+@Documnet(collection = "user_authority")
+public class Authority {
+    private String user;
+
+    @Id
+    private String concept;
+
+    private String value;
+
+    private String statement;
+
+    private String registered;
+
+    @Builder
+    public Authority(String user, String concept, String value, String statement, String registered) {
+        this.user = user;
+        this.concept = concept;
+        this.value = value;
+        this.statement = statement;
+        this.registered = registered;
+    }
+
+#user_myRoom
+@Getter
+@NoArgsConstructor
+@Documnet(collection = "user_myroom")
+public class MyRoom {
+    private String user;
+
+    @Id
+    private String concept;
+
+    private String value;
+
+    private String statement;
+
+    private String registered;
+
+    @Builder
+    public MyRoom(String user, String concept, String value, String statement, String registered) {
+        this.user = user;
+        this.concept = concept;
+        this.value = value;
+        this.statement = statement;
+        this.registered = registered;
+    }
+}
+
+#user_name
+@Getter
+@NoArgsConstructor
+@Documnet(collection = "user_name")
+public class Name {
+
+    private String user;
+
+    @Id
+    private String concept;
+
+    private String value;
+
+    private String statement;
+
+    private String registered;
+
+    @Builder
+    public Name(String user, String concept, String value, String statement, String registered) {
+        this.user = user;
+        this.concept = concept;
+        this.value = value;
+        this.statement = statement;
+        this.registered = registered;
+    }
+}
+
+
+#room_colorCode
+@Getter
+@NoArgsConstructor
+@Documnet(collection = "room_colorcode")
+public class RoomColor {
+    private String user;
+
+    @Id
+    private String concept;
+
+    private String value;
+
+    private String statement;
+
+    private String registered;
+
+    @Builder
+    public RoomColor(String user, String concept, String value, String statement, String registered) {
+        this.user = user;
+        this.concept = concept;
+        this.value = value;
+        this.statement = statement;
+        this.registered = registered;
+    }
+}
+
+#room_created
+@Getter
+@NoArgsConstructor
+@Documnet(collection = "room_created")
+public class RoomCreated {
+
+    private String user;
+
+    @Id
+    private String concept;
+
+    private String value;
+
+    private String statement;
+
+    private String registered;
+
+    @Builder
+    public RoomCreated(String user, String concept, String value, String statement, String registered) {
+        this.user = user;
+        this.concept = concept;
+        this.value = value;
+        this.statement = statement;
+        this.registered = registered;
+    }
+}
+
+#room_exp
+@Getter
+@NoArgsConstructor
+@Documnet(collection = "room_exp")
+public class Explanation {
+
+    private String user;
+
+    @Id
+    private String concept;
+
+    private String value;
+
+    private String statement;
+
+    private String registered;
+
+    @Builder
+    public Explanation(String user, String concept, String value, String statement, String registered) {
+        this.user = user;
+        this.concept = concept;
+        this.value = value;
+        this.statement = statement;
+        this.registered = registered;
+    }
+}
+
+#room_file
+@Getter
+@NoArgsConstructor
+@Documnet(collection = "room_file")
+public class RoomFile {
+    private String user;
+
+    @Id
+    private String concept;
+
+    private String value;
+
+    private String statement;
+
+    private String registered;
+
+    @Builder
+    public RoomFile(String user, String concept, String value, String statement, String registered) {
+        this.user = user;
+        this.concept = concept;
+        this.value = value;
+        this.statement = statement;
+        this.registered = registered;
+    }
+}
+
+#room_leader
+@Getter
+@NoArgsConstructor
+@Documnet(collection = "room_leader")
+public class Leader {
+    private String user;
+
+    @Id
+    private String concept;
+
+    private String value;
+
+    private String statement;
+
+    private String registered;
+
+    @Builder
+    public Leader(String user, String concept, String value, String statement, String registered) {
+        this.user = user;
+        this.concept = concept;
+        this.value = value;
+        this.statement = statement;
+        this.registered = registered;
+    }
+}
+
+#room_members
+@Getter
+@NoArgsConstructor
+@Documnet(collection = "room_members")
+public class Members {
+    private String user;
+
+    @Id
+    private String concept;
+
+    private String value;
+
+    private String statement;
+
+    private String registered;
+
+    @Builder
+    public Members(String user, String concept, String value, String statement, String registered) {
+        this.user = user;
+        this.concept = concept;
+        this.value = value;
+        this.statement = statement;
+        this.registered = registered;
+    }
+}
+
+#room_name
+@Getter
+@NoArgsConstructor
+@Documnet(collection = "room_name")
+public class RoomName {
+    private String user;
+
+    @Id
+    private String concept;
+
+    private String value;
+
+    private String statement;
+
+    private String registered;
+
+    @Builder
+    public RoomName(String user, String concept, String value, String statement, String registered) {
+        this.user = user;
+        this.concept = concept;
+        this.value = value;
+        this.statement = statement;
+        this.registered = registered;
+    }
+}
+
+#room_topic
+@Getter
+@NoArgsConstructor
+@Documnet(collection = "room_topic")
+public class Topic {
+    private String user;
+
+    @Id
+    private String concept;
+
+    private String value;
+
+    private String statement;
+
+    private String registered;
+
+    @Builder
+    public Topic(String user, String concept, String value, String statement, String registered) {
+        this.user = user;
+        this.concept = concept;
+        this.value = value;
+        this.statement = statement;
+        this.registered = registered;
+    }
+}
+
+
+#file_download
+@Getter
+@NoArgsConstructor
+@Document(collection = "file_download")
+public class Download {
+
+    private String user;
+
+    @Id
+    private String concept;
+
+    private String value;
+
+    private String statement;
+
+    private String registered;
+
+    @Builder
+    public Download(String user, String concept, String value, String statement, String registered) {
+        this.user = user;
+        this.concept = concept;
+        this.value = value;
+        this.statement = statement;
+        this.registered = registered;
+    }
+}
+
+#file_name
+@Getter
+@NoArgsConstructor
+@Document(collection = "file_name")
+public class FileName {
+    private String user;
+
+    @Id
+    private String concept;
+
+    private String value;
+
+    private String statement;
+
+    private String registered;
+
+    @Builder
+    public FileName(String user, String concept, String value, String statement, String registered) {
+        this.user = user;
+        this.concept = concept;
+        this.value = value;
+        this.statement = statement;
+        this.registered = registered;
+    }
+}
+
+#file_size
+@Getter
+@NoArgsConstructor
+@Documnet(collection = "file_size")
+public class FileSize {
+    private String user;
+
+    @Id
+    private String concept;
+
+    private String value;
+
+    private String statement;
+
+    private String registered;
+
+    @Builder
+    public FileSize(String user, String concept, String value, String statement, String registered) {
+        this.user = user;
+        this.concept = concept;
+        this.value = value;
+        this.statement = statement;
+        this.registered = registered;
+    }
+}
+
+#file_type
+@Getter
+@NoArgsConstructor
+@Documnet(collection = "file_type")
+public class FileType {
+    private String user;
+
+    @Id
+    private String concept;
+
+    private String value;
+
+    private String statement;
+
+    private String registered;
+
+    @Builder
+    public FileType(String user, String concept, String value, String statement, String registered) {
+        this.user = user;
+        this.concept = concept;
+        this.value = value;
+        this.statement = statement;
+        this.registered = registered;
+    }
+}
+
+#file_uploader
+@Getter
+@NoArgsConstructor
+@Documnet(collection = "file_uploader")
+public class Uploader {
+    private String user;
+
+    @Id
+    private String concept;
+
+    private String value;
+
+    private String statement;
+
+    private String registered;
+
+    @Builder
+    public Uploader(String user, String concept, String value, String statement, String registered) {
+        this.user = user;
+        this.concept = concept;
+        this.value = value;
+        this.statement = statement;
+        this.registered = registered;
+    }
+}
+
+
+}
+

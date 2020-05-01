@@ -11,23 +11,17 @@ import javax.persistence.Table;
 
 @Getter
 @NoArgsConstructor
-@Entity
-@Table(name = "room_name")
+@Documnet(collection = "room_name")
 public class RoomName {
-    @Column(nullable = false, length = 9)
     private String user;
 
     @Id
-    @Column(length = 9)
     private String concept;
 
-    @Column(nullable = false, length = 200)
     private String value;
 
-    @Column(nullable = false, length = 1)
     private String statement;
 
-    @Column(nullable = false, length = 30)
     private String registered;
 
     @Builder
