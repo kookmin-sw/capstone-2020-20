@@ -1,4 +1,6 @@
 package co.kr.rooom.service.domain.File.type;
 
-public interface FileTypeRepo extends MongoRepository<FileType, String> {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface FileTypeRepo extends JpaRepository<FileType, String> {
 }

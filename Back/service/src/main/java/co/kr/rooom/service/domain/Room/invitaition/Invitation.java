@@ -1,28 +1,29 @@
-package co.kr.rooom.service.domain.Room.leader;
+package co.kr.rooom.service.domain.Room.invitaition;
 
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Getter
 @NoArgsConstructor
 @Entity
-@Table(name = "room_leader")
-public class Leader {
+@Table(name = "room_invitation")
+public class Invitation {
     @Column(nullable = false, length = 9)
     private String user;
 
     @Id
-    @Column(length = 50)
-    private String concept;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(length = 21)
+    private long concept;
 
     @Column(nullable = false, length = 9)
     private String value;
+
+    @Column(nullable = false, length = 50)
+    private String room;
 
     @Column(nullable = false, length = 1)
     private String statement;
@@ -31,10 +32,10 @@ public class Leader {
     private String registered;
 
     @Builder
-    public Leader(String user, String concept, String value, String statement, String registered) {
+    public Invitation(String user, String value, String room, String statement, String registered) {
         this.user = user;
-        this.concept = concept;
         this.value = value;
+        this.room = room;
         this.statement = statement;
         this.registered = registered;
     }

@@ -1,4 +1,4 @@
-package co.kr.rooom.service.domain.Room.leader;
+package co.kr.rooom.service.domain.topic;
 
 import lombok.Builder;
 import lombok.Getter;
@@ -12,16 +12,17 @@ import javax.persistence.Table;
 @Getter
 @NoArgsConstructor
 @Entity
-@Table(name = "room_leader")
-public class Leader {
+@Table(name = "name")
+
+public class TopicName {
     @Column(nullable = false, length = 9)
     private String user;
 
     @Id
-    @Column(length = 50)
+    @Column(length = 9)
     private String concept;
 
-    @Column(nullable = false, length = 9)
+    @Column(nullable = false, length = 200)
     private String value;
 
     @Column(nullable = false, length = 1)
@@ -31,7 +32,7 @@ public class Leader {
     private String registered;
 
     @Builder
-    public Leader(String user, String concept, String value, String statement, String registered) {
+    public TopicName(String user, String concept, String value, String statement, String registered) {
         this.user = user;
         this.concept = concept;
         this.value = value;

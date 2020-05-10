@@ -23,9 +23,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-jdbc'
     implementation 'org.springframework.boot:spring-boot-starter-security'
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
 
-    출처: https://mommoo.tistory.com/79 [개발자로 홀로 서기]
     // 기본 json 이 아닌 json-simple 이라는 라이브러리를 사용합니다.
     compile group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
     compile group: 'io.jsonwebtoken', name: 'jjwt', version: '0.9.1'

@@ -1,4 +1,6 @@
 package co.kr.rooom.service.domain.File.download;
 
-public interface DownloadRepo extends MongoRepository<Download, String> {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface DownloadRepo extends JpaRepository<Download, String> {
 }

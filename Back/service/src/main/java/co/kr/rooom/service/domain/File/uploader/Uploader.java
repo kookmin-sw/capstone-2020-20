@@ -11,17 +11,23 @@ import javax.persistence.Table;
 
 @Getter
 @NoArgsConstructor
-@Documnet(collection = "file_uploader")
+@Entity
+@Table(name = "file_uploader")
 public class Uploader {
+    @Column(nullable = false, length = 9)
     private String user;
 
     @Id
+    @Column(length = 50)
     private String concept;
 
+    @Column(nullable = false, length = 9)
     private String value;
 
+    @Column(nullable = false, length = 1)
     private String statement;
 
+    @Column(nullable = false, length = 30)
     private String registered;
 
     @Builder

@@ -24,6 +24,6 @@ public class UserController {
     @GetMapping("/load")
     public JSONObject infoLoad(HttpServletRequest header, @RequestParam(name = "page") int page) {
         System.out.println(header.getHeader("Authorization").substring(7) + " // page : " + page);
-        return new JSONObject();
+        return service.loadInfo(header.getHeader("Authorization").substring(7), page);
     }
 }

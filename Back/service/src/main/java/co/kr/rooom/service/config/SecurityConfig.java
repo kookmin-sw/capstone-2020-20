@@ -62,6 +62,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
                 .authorizeRequests()
+                    .antMatchers("/user/token").anonymous()
                     .anyRequest().permitAll()
 //                .and()
 //                    .apply(new JwtConfigurer(jwtTokenProvider))
