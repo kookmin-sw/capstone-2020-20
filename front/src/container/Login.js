@@ -1,15 +1,14 @@
-import React, { Fragment, useState, useContext} from 'react';
+import React, { Fragment, useState, useContext } from 'react';
 import '../css.css';
 import moment from 'moment'
 import Logo from '../images/Logo.png';
 import Footer from "../components/Footer";
 import Cookies from 'js-cookie';
 import axios from "axios";
-import MyRoomContext from '../context/MyRoomContext';
-
+import UserContext from '../context/UserContext';
 
 const Login = (props) => {
-    const [User, setUser] = useState({
+    const [kookmin, setKookmin] = useState({
         sUserId: "",
         sUserPW: "",
         sCallKey: "KMUCS2",
@@ -21,16 +20,16 @@ const Login = (props) => {
     let SUCC_CD = ""
     let USER_NM = ""
 
-    const { isLogged, setIsLogged } = useContext(MyRoomContext);
+    const { User, setUser } = useContext(UserContext);
 
     const userTyping = (whichInput, event) => {
         switch (whichInput) {
             case 'id':
-                setUser({ ...User, sUserId: event.target.value, sAuthKey: getEncryptStr("swlog1", event.target.value) });
+                setKookmin({ ...kookmin, sUserId: event.target.value, sAuthKey: getEncryptStr("swlog1", event.target.value) });
                 break;
 
             case 'password':
-                setUser({ ...User, sUserPW: event.target.value });
+                setKookmin({ ...kookmin, sUserPW: event.target.value });
                 break;
 
             default:
@@ -60,12 +59,13 @@ const Login = (props) => {
 
     const submitSignup = async (e) => {
         e.preventDefault();
+
         await axios.get('https://ktis.kookmin.ac.kr/kmu/com.LoginAPI.do', {
             params: {
-                txt_userid: User.sUserId,
-                txt_userpw: User.sUserPW,
-                txt_call_key: User.sCallKey,
-                txt_auth_key: User.sAuthKey,
+                txt_userid: kookmin.sUserId,
+                txt_userpw: kookmin.sUserPW,
+                txt_call_key: kookmin.sCallKey,
+                txt_auth_key: kookmin.sAuthKey,
             },
         }).then((res) => {
             const data = res.data.split("\n")
@@ -80,28 +80,29 @@ const Login = (props) => {
 
         else {
             console.log("로그인 성공")
-            
-            setIsLogged(true);
 
             let formData = new FormData();
 
-            formData.append("User_id", User.sUserId)
+            formData.append("User_id", kookmin.sUserId)
             formData.append("User_name", USER_NM);
 
-            // await axios.post("http://211.208.115.66:20000/user/token", formData)
-            //     .then((res) => {
-            //         Cookies.set('token', res.data);
-            //     }).catch((err) => console.log(err));
+            await axios.post("http://localhost:8080/user/token", formData)
+                .then((res) => {
+                    Cookies.set('token', res.data);
+                }).catch((err) => console.log(err));
 
-            // await axios.get("http://211.208.115.66:20000/user/token", { headers: { Authorization: Cookies.get('token') } })
-            //     .then((res) => {
-            //         setMyRoomInfo({ ...myRoomInfo, data: res.data });
-            //     }).catch((err) => console.log(err));
+            await axios.get("http://localhost:8080/user/load?page=0", { headers: { Authorization: Cookies.get('token') } })
+                .then((res) => {
+                    Cookies.set('User_name', res.data.User_name)
+                   props.history.push('/myroom')
+                }).catch((err) => console.log(err));
 
-            props.history.push('/myroom')
         }
 
     }
+
+    // const url = "http://61.101.55.223:8787/login?txt_userid=" + User.sUserId + "&txt_userpw=" + User.sUserPW + "&txt_call_key="
+    //              + User.sCallKey + "&txt_auth_key=" + User.sAuthKey;
 
     return (
         <Fragment>
@@ -113,14 +114,14 @@ const Login = (props) => {
 
                     <form onSubmit={submitSignup}>
                         <p className="input">
-                            <input name="txt_userid" value={User.sUserId} onChange={(e) => { userTyping('id', e) }} type="text" maxLength="10" placeholder="학번" className="text" />
+                            <input name="txt_userid" value={kookmin.sUserId} onChange={(e) => { userTyping('id', e) }} type="text" maxLength="10" placeholder="학번" className="text" />
                         </p>
                         <p className="input">
-                            <input name="txt_userpw" value={User.sUserPW} onChange={(e) => { userTyping('password', e) }} type="password" maxLength="20" placeholder="비밀번호" className="text" />
+                            <input name="txt_userpw" value={kookmin.sUserPW} onChange={(e) => { userTyping('password', e) }} type="password" maxLength="20" placeholder="비밀번호" className="text" />
                         </p>
-                        <input type="hidden" name="txt_call_key" value={User.sCallKey}></input>
-                        <input type="hidden" name="txt_auth_key" value={User.sAuthKey}></input>
-                        <input type="hidden" name="txt_return_url" value={User.txt_return_url}></input>
+                        <input type="hidden" name="txt_call_key" value={kookmin.sCallKey}></input>
+                        <input type="hidden" name="txt_auth_key" value={kookmin.sAuthKey}></input>
+                        <input type="hidden" name="txt_return_url" value={kookmin.txt_return_url}></input>
                         <p className="submit">
                             <input type="submit" value="로그인" className="text" />
                         </p>

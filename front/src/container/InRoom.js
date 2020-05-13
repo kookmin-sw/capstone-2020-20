@@ -7,14 +7,12 @@ const InRoom = () => {
 
     return (
         <Fragment>
-            <Header isLogged={true}></Header>
+            <Header></Header>
             <InRoomContent></InRoomContent>
         </Fragment>
     )
 
 }
-
-
 
 export default InRoom;
 

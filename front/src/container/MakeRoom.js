@@ -2,7 +2,6 @@ import React, { Component, Fragment } from 'react';
 import '../css.css';
 
 import Logo from '../images/Rooom_Logo.png';
-import { Link } from "react-router-dom";
 
 const Login = (props) => {
 
@@ -40,7 +39,7 @@ const Login = (props) => {
                             방 색상
                                 <p className="inputColor">
                                 <input type="color" maxLength="10" className="color" />
-                                </p>
+                            </p>
                         </label>
                         <p className="submit">
                             <input type="submit" value="생성하기" className="text" />

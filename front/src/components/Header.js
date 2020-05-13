@@ -1,5 +1,6 @@
 import React, { Fragment, useState } from 'react'
 import { Link } from "react-router-dom";
+import Cookies from 'js-cookie';
 import '../css.css';
 
 import Logo from '../images/Logo.png';
@@ -39,7 +40,7 @@ const Header = (props) => {
 
     return (
         <Fragment>
-            {props.isLogged ?
+            {Cookies.get("token") ?
                 <Fragment>
                     <div className="header">
                         <div className="header-container">

@@ -7,7 +7,7 @@ import Login from "./container/Login";
 import MyRoom from "./container/MyRoom";
 import MakeRoom from "./container/MakeRoom";
 import InRoom from "./container/InRoom";
-import MyRoomProvider from './provider/MyRoomProvider';
+import UserProvider from './provider/UserProvider';
 
 function App() {
 
@@ -15,13 +15,15 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <CookiesProvider>
-          <Route exact path="/" component={Main} />
-          <MyRoomProvider>
+
+          <UserProvider>
+            <Route exact path="/" component={Main} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/myroom" component={MyRoom} />
-          </MyRoomProvider>
-          <Route exact path="/makeroom" component={MakeRoom} />
-          <Route exact path="/inroom" component={InRoom} />
+            <Route exact path="/makeroom" component={MakeRoom} />
+            <Route exact path="/inroom" component={InRoom} />
+          </UserProvider>
+
         </CookiesProvider>
       </BrowserRouter>
 
