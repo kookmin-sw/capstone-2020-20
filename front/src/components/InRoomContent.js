@@ -22,8 +22,8 @@ const InRoomContent = () => {
                 </div>
                 <div>
                     <ul className="navList">
-                        <li className = "menu">채널
-                            <ul className = "subList">
+                        <li className="menu">채널
+                            <ul className="subList">
                                 <li>기본 채널</li>
                                 <li>프론트</li>
                                 <li>백엔드</li>
@@ -32,15 +32,15 @@ const InRoomContent = () => {
                                 </Popup>
                             </ul>
                         </li>
-                        <li className = "menu">팀원
-                            <ul  className = "subList">
+                        <li className="menu">팀원
+                            <ul className="subList">
                                 <li>이지훈</li>
                                 <li>허민</li>
                                 <li>한준호</li>
-                                <Popup trigger={<li>윤수민</li>} 
-                                    position="right bottom" 
+                                <Popup trigger={<li>윤수민</li>}
+                                    position="right bottom"
                                     lockScroll="false"
-                                    contentStyle= {{ width: "300px" }} >
+                                    contentStyle={{ width: "300px" }} >
                                     {close => <MemberInfo close={close} />}
                                 </Popup>
                                 <Popup modal trigger={<button> 멤버 추가</button>}>
@@ -48,8 +48,8 @@ const InRoomContent = () => {
                                 </Popup>
                             </ul>
                         </li>
-                        <li className = "menu">자료</li>
-                        <li className = "menu">회의</li>
+                        <li className="menu">자료</li>
+                        <li className="menu">회의</li>
                     </ul>
                 </div>
             </div>

@@ -1,15 +1,37 @@
-import React, { Component, Fragment } from 'react';
+import React, { Fragment, useRef } from 'react';
 import '../css.css';
+import axios from "axios";
 
 import Logo from '../images/Rooom_Logo.png';
 
 const Login = (props) => {
 
-    const onMakeRoom = (e) => {
+    const roomNameRef = useRef();
+    const roomDescRef = useRef();
+    const roomColorRef = useRef();
+
+    const onMakeRoom = async (e) => {
         e.preventDefault();
 
-        props.history.push('/inroom')
+        const roomName = roomNameRef.current.value
+        const roomDesc = roomNameRef.current.value
+        const roomColor = roomColorRef.current.value
 
+        let formData = new FormData();
+
+        formData.append("roomName", roomName)
+        formData.append("roomDesc", roomDesc)
+        formData.append("roomColor", roomColor)
+
+        console.log(roomName)
+        console.log(roomDesc)
+        console.log(roomColor)
+
+        // await axios.post("http://localhost:8080/user/token", formData)
+        //     .then((res) => {
+        //     }).catch((err) => console.log(err));
+
+        props.history.push('/inroom')
     }
 
 
@@ -26,19 +48,19 @@ const Login = (props) => {
                         <label>
                             방 이름
                                 <p className="input">
-                                <input type="text" maxLength="10" placeholder="" className="text" />
+                                <input ref={roomNameRef} type="text" maxLength="10" placeholder="" className="text" />
                             </p>
                         </label>
                         <label>
                             방 소개
                                 <p className="input">
-                                <input type="text" maxLength="20" placeholder="" className="text" />
+                                <input ref={roomDescRef} type="text" maxLength="20" placeholder="" className="text" />
                             </p>
                         </label>
                         <label>
                             방 색상
                                 <p className="inputColor">
-                                <input type="color" maxLength="10" className="color" />
+                                <input ref={roomColorRef} type="color" maxLength="10" className="color" />
                             </p>
                         </label>
                         <p className="submit">

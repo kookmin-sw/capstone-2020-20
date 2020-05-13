@@ -20,8 +20,6 @@ const Login = (props) => {
     let SUCC_CD = ""
     let USER_NM = ""
 
-    const { User, setUser } = useContext(UserContext);
-
     const userTyping = (whichInput, event) => {
         switch (whichInput) {
             case 'id':
@@ -75,7 +73,7 @@ const Login = (props) => {
         })
 
         if ((SUCC_CD != 999)) {
-            alert("학번이나 비밀번호가 틀렸습니다. \n다시 확인해주세요.")
+            alert("아이디 혹은 패스워드가 잘못 입력되었습니다. \n다시 확인해주세요.")
         }
 
         else {
@@ -94,7 +92,7 @@ const Login = (props) => {
             await axios.get("http://localhost:8080/user/load?page=0", { headers: { Authorization: Cookies.get('token') } })
                 .then((res) => {
                     Cookies.set('User_name', res.data.User_name)
-                   props.history.push('/myroom')
+                    props.history.push('/myroom')
                 }).catch((err) => console.log(err));
 
         }
