@@ -8,6 +8,8 @@ import MyRoom from "./container/MyRoom";
 import MakeRoom from "./container/MakeRoom";
 import InRoom from "./container/InRoom";
 import UserProvider from './provider/UserProvider';
+import FileBox from "./container/FileBox";
+import NoticeBox from "./container/NoticeBox";
 
 function App() {
 
@@ -22,6 +24,8 @@ function App() {
             <Route exact path="/myroom" component={MyRoom} />
             <Route exact path="/makeroom" component={MakeRoom} />
             <Route exact path="/inroom" component={InRoom} />
+            <Route exact path="/filebox" component={FileBox} />
+            <Route exact path="/noticebox" component={NoticeBox} />
           </UserProvider>
 
         </CookiesProvider>

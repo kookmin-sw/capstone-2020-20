@@ -652,6 +652,7 @@ html, body, #root, .App {
 .notice {
     width: 400px;
     height: 50%;
+    overflow-y: auto; 
     float: right;
     border-bottom: 1px solid #d1d8e4;
     text-align: center;
@@ -661,6 +662,7 @@ html, body, #root, .App {
 .file {
     width: 400px;
     height: 49%;
+    overflow-y: auto; 
     float: right;
     text-align: center;
     vertical-align: middle;
@@ -709,19 +711,136 @@ html, body, #root, .App {
     border: 1px solid #cfcece;
 }
 
+::-webkit-scrollbar {
+    display:none;
+}
+
 /** 공지사항 **/
 .notice_container {
     width: '100%';
     max-width: 36 ;
+    overflow: hidden;
+    -ms-overflow-style: none;
 }
 
 /** 자료 **/
 .file_container {
     width: '100%';
     max-width: 36 ;
+    overflow: hidden;
 }
 
 .file_icon {
     margin: 9px 10px 0 10px ;
 }
 
+/** FileBox **/
+.leftNav_wrapper {
+    padding-top: 63px;
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 63px);
+    float: left;
+}
+
+.filecontent_wrapper {
+    padding-top: 63px;
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 63px);
+    float: left;
+}
+
+
+/** file_card **/
+
+.fileCard_container {
+    vertical-align: middle;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    overflow:hidden;
+}
+
+.file_card {
+    display : inline-block;
+    margin : 15px;
+    width: 250px;
+    height: 230px;
+    border-radius: 20px;
+    vertical-align: middle;
+    background-color: white;
+    box-shadow : 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
+
+}
+
+.fileCard_preview{
+    width: 100%;
+    min-height: 140px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px 8px 0 0;
+    cursor: zoom-in;
+}
+
+.fileCard_content{
+    display: flex;
+    flex-direction: column;
+    min-height: 84px;
+    flex: 1 1 auto;
+    padding: 10px 16px 12px 16px;
+    border-top: 1px solid #cfcece;
+    cursor: pointer;
+}
+
+.fileCard_name{
+    font-size: 15px;
+}
+
+.fileCard_info{
+    font-size: 13px;
+    color: gray;
+    float: left;
+}
+
+
+/** noticeCard **/
+
+.notice_card {
+    display : inline-block;
+    margin : 10px;
+    width: 700px;
+    height: 60px;
+    border-radius: 10px;
+    vertical-align: middle;
+    background-color: white;
+    box-shadow : 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
+
+}
+
+.noticeCard_userImg{
+    margin: 20px;
+    float: left;
+}
+
+.noticeCard_content{
+    float: left;
+    min-height: 84px;
+    flex: 1 1 auto;
+    padding: 10px 16px 12px 16px;
+    cursor: pointer;
+}
+
+.noticeCard_name{
+    font-size: 15px;
+    margin-left: -30px;
+}
+
+.noticeCard_info{
+    font-size: 13px;
+    color: gray;
+    float: left;
+    margin: 5px;
+}

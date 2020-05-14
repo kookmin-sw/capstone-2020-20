@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 import '../css.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Popup from "reactjs-popup";
@@ -43,12 +44,13 @@ const InRoomContent = () => {
                                     contentStyle={{ width: "300px" }} >
                                     {close => <MemberInfo close={close} />}
                                 </Popup>
-                                <Popup modal trigger={<button> 멤버 추가</button>}>
+                                <Popup modal trigger={<Button variant="outlined" color="primary">멤버 추가</Button>}>
                                     {close => <Member close={close} />}
                                 </Popup>
                             </ul>
                         </li>
-                        <li className="menu">자료</li>
+                        <Link to="/filebox" style={{ textDecoration: 'none' }}><li className = "menu">자료</li></Link>
+                        <Link to="/noticebox" style={{ textDecoration: 'none' }}><li className = "menu">공지사항</li></Link>
                         <li className="menu">회의</li>
                     </ul>
                 </div>

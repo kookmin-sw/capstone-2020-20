@@ -35,6 +35,22 @@ export default function Notice() {
         </ListItemAvatar>
         <ListItemText primary="깃허브 관리" secondary="July 20, 2020" />
       </ListItem>
+      <ListItem>
+        <ListItemAvatar>
+          <Avatar>
+            <FontAwesomeIcon className="file_icon" icon="user" size="2x" />
+          </Avatar>
+        </ListItemAvatar>
+        <ListItemText primary="깃허브 관리" secondary="July 20, 2020" />
+      </ListItem>
+      <ListItem>
+        <ListItemAvatar>
+          <Avatar>
+            <FontAwesomeIcon className="file_icon" icon="user" size="2x" />
+          </Avatar>
+        </ListItemAvatar>
+        <ListItemText primary="깃허브 관리" secondary="July 20, 2020" />
+      </ListItem>
     </List>
   );
 }

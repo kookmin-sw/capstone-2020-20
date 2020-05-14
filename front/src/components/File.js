@@ -28,6 +28,19 @@ export default function File() {
         </ListItemIcon>
         <ListItemText primary="시연영상" secondary="July 20, 2020" />
       </ListItem>
+      <ListItem>
+        <ListItemIcon>
+          <FontAwesomeIcon className="file_icon" icon="file-video" size="2x" />
+        </ListItemIcon>
+        <ListItemText primary="발표영상" secondary="July 20, 2020" />
+      </ListItem>
+      <ListItem>
+        <ListItemIcon>
+          <FontAwesomeIcon className="file_icon" icon="file-pdf" size="2x" />
+        </ListItemIcon>
+        <ListItemText primary="중간보고서" secondary="July 20, 2020" />
+      </ListItem>
+      
     </List>
   );
 }
