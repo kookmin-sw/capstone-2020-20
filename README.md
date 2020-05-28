@@ -115,6 +115,9 @@ Front-end | back-end
 
 # 6. 2차 중간  영상 (중간 자문 평가)
 
+[![main](https://user-images.githubusercontent.com/21411732/83165789-f9ddc780-a148-11ea-91c5-7466c553bd75.png)](https://youtu.be/2ybCKdMyfU4)
+
+
 ***
 <br/><br/>
 
