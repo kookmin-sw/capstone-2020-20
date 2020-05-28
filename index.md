@@ -114,12 +114,17 @@ The goal is to provide teams with free, yet highly available services to multipl
 ***
 <br/><br/>
 
-# 5. 중간 시연 영상 (중간 자문 평가)
+# 5. 1차 중간 발표 영상 (중간 자문 평가)
 
 [![제목 없음](https://user-images.githubusercontent.com/12928638/80109903-0eaec480-85b9-11ea-8433-7a7fde8ba8fa.png)](https://www.youtube.com/watch?v=hzdG9PkrjIs)
 
+# 6. 2차 중간 발표 영상 (중간 자문 평가)
 
-# 6. 결과 영상
+
+***
+<br/><br/>
+
+# 7. 결과 영상
 
 추후 업로드 예정
 ***
