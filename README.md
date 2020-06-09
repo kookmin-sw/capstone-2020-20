@@ -123,5 +123,6 @@ Front-end | back-end
 
 # 7. 결과 영상
 
-추후 업로드 예정
+[![main](https://user-images.githubusercontent.com/48545651/84160004-ace2e500-aaa8-11ea-9900-5ad5f07e3f96.png)](https://youtu.be/S-x6tcbN4Fg)
+
 ***
