@@ -129,6 +129,35 @@ html, body, #root, .App {
     line-height: 50px;
 }
 
+/* Main */
+.main_content{
+    padding-top: 100px;
+    text-align: center;
+}
+
+.main_title{
+    color: #07689f;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-shadow: 0 1px 3px rgba(0,0,0,.2);
+    font-family: "Malgun Gothic",Georgia,serif;
+}
+
+.main_desc{
+    color: rgb(127, 180, 211);
+    font-size: 18px;
+    line-height: 24px;
+    margin: 24px 12px 24px 0;
+    text-shadow: 0 1px 3px rgba(0,0,0,.2);
+    font-family: "Malgun Gothic",Georgia,serif;
+}
+
+.main_img{
+    margin-bottom: 100px;
+
+}
+
 /* Login */
 .login-container {
     background-color: white;
