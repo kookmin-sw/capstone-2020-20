@@ -5,7 +5,7 @@ import Logo from '../images/Logo.png';
 import Footer from "../components/Footer";
 import Cookies from 'js-cookie';
 import axios from "axios";
-import UserContext from '../context/UserContext';
+import RoomContext from '../context/RoomContext';
 
 const Login = (props) => {
     const [kookmin, setKookmin] = useState({
@@ -16,6 +16,8 @@ const Login = (props) => {
         txt_return_url: "",
         signupError: ''
     });
+
+    const { myroomInfo, setMyroomInfo } = useContext(RoomContext)
 
     let SUCC_CD = ""
     let USER_NM = ""
@@ -83,6 +85,8 @@ const Login = (props) => {
 
             formData.append("User_id", kookmin.sUserId)
             formData.append("User_name", USER_NM);
+
+            
 
             await axios.post("http://localhost:8080/user/token", formData)
                 .then((res) => {

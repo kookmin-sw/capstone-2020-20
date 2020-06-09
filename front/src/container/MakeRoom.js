@@ -34,6 +34,10 @@ const Login = (props) => {
         props.history.push('/inroom')
     }
 
+    const goBack = () => {
+        props.history.goBack()
+    }
+
 
     return (
         <Fragment>
@@ -66,10 +70,11 @@ const Login = (props) => {
                         <p className="submit">
                             <input type="submit" value="생성하기" className="text" />
                         </p>
-                        <p className="submit">
-                            <input type="submit" value="뒤로가기" className="text" />
-                        </p>
+
                     </form>
+                    <p className="submit">
+                        <div className="text" onClick = {goBack}>뒤로가기</div>
+                    </p>
 
                 </div>
             </div>
